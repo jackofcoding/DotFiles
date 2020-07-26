@@ -61,6 +61,8 @@ if [ -f ~/GitScripts/.gitcompletion.sh -a -f ~/GitScripts/.gitprompt.sh ]; then
 	source ~/GitScripts/.gitcompletion.sh
 	source ~/GitScripts/.gitprompt.sh
 	export GIT_PS1_SHOWDIRTYSTATE=1
+	export GIT_PS1_SHOWUNTRACKEDFILES=true
+	export GIT_PS1_SHOWUPSTREAM="verbose"
 fi
 
 #export LC_ALL=en_US.UTF-8
