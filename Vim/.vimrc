@@ -50,3 +50,8 @@ set laststatus=2
 "To automatically save and restore views for * files
 autocmd BufWInLeave *.* mkview
 autocmd BufWinEnter *.* loadview
+autocmd BufNewFile  *.c 	0r ~/.vim/templates/skeleton.c 
+autocmd BufNewFile  *.cpp 	0r ~/.vim/templates/skeleton.cpp
+autocmd BufNewFile  *.sh 	0r ~/.vim/templates/skeleton.sh
+
+
