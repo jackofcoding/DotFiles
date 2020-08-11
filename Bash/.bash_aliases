@@ -11,4 +11,3 @@ alias dl='ls -d'
 alias tmux='tmux -u'
 
 #man config
-alias man='man -P most'

@@ -82,9 +82,9 @@ fi
 
 status_display() {  
 	if [[ 0 == $? ]]; then
-		echo -ne '\U0001F913 \033[01;32m'
+		echo -ne "\U0001F913 \033[01;32m"
 	else 
-	 	echo -ne '\U0001f621 \033[01;31m'
+	 	echo -ne "\U0001f621 \033[01;31m [ $? ]"
 	fi
 }
 
@@ -149,6 +149,14 @@ fi
 
 VIMRUNTIME="/usr/share/vim/vim81"
 export VIMRUNTIME
+
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;34m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 
 ######################MY ALIASES#################################
