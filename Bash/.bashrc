@@ -89,7 +89,7 @@ status_display() {
 }
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[01;33m\]@\[\033[01;34m\]\h \[\033[00m\]- \[\033[00;33m\]\w \[\033[06;31m\]$(__git_ps1 "[%s]")\[\033[00m\] $(status_display)\n\$└─▶ \[\033[00m\]'
+    PS1='${debian_chroot:+($debian_chroot)}[$BASHPID] \[\033[01;36m\]\u\[\033[01;33m\]@\[\033[01;34m\]\h \[\033[00m\]- \[\033[00;33m\]\w \[\033[06;31m\]$(__git_ps1 "[%s]")\[\033[00m\] $(status_display)\n\$└─▶ \[\033[00m\]'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -150,11 +150,13 @@ fi
 VIMRUNTIME="/usr/share/vim/vim81"
 export VIMRUNTIME
 
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[1;34m'
-export LESS_TERMCAP_me=$'\e[0m'
+# color config for less pager
+
+export LESS_TERMCAP_mb=$'\e[1;31m'				
+export LESS_TERMCAP_md=$'\e[1;34m'				#heading color
+export LESS_TERMCAP_me=$'\e[0;33m'
 export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_so=$'\e[01;33m' 			# status line
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
