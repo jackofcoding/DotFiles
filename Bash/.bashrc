@@ -147,8 +147,8 @@ fi
 
 ######################MY EXPORTS#################################
 
-VIMRUNTIME="/usr/share/vim/vim81"
-export VIMRUNTIME
+#VIMRUNTIME="/usr/share/vim/vim81"
+#export VIMRUNTIME
 
 # color config for less pager
 

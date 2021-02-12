@@ -4,7 +4,7 @@ syntax on
 syntax enable
 
 try
-	colo morning
+	color morning
 catch
 endtry 
 
