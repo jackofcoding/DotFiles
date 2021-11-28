@@ -171,3 +171,8 @@ alias tmux='tmux -u'
 
 xmodmap -e 'keycode 87 = '
 xmodmap -e 'keycode 115 = '
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
